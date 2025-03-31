@@ -16,6 +16,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
+## ---------------------------------------- ##
     def insert_at_end(self, data):
         new_node = Node(data)
         if self.head is None:
@@ -25,8 +26,8 @@ class LinkedList:
         while current.get_next() is not None:
             current = current.get_next()
         current.set_next(new_node)
-
 ## ---------------------------------------- ##
+    
     def display(self):
         if self.head is None:
             return "Empty list"
@@ -36,7 +37,6 @@ class LinkedList:
             result += str(current.get_data()) + " -> "
             current = current.get_next()
         return result + "None"
-## ---------------------------------------- ##
 
 # Código de prueba
 test_list = LinkedList()
